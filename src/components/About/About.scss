@@ -1,0 +1,71 @@
+.About-me {
+  .container {
+    padding: 30px;
+    .title {
+      text-align: center;
+      font-family: Rubik;
+      font-size: 45px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00dbd0 24.5%, #7b3bf9 60.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+    }
+    &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__img {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Answer {
+          max-width: 514px;
+          max-height: 514px;
+        }
+      }
+      &__content {
+        width: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .circle {
+          width: 200px;
+          height: 200px;
+          background-color: #04007cc2;
+          position: absolute;
+          border-radius: 50%;
+          bottom: -40px;
+          right: 0px;
+        }
+        .circle-two {
+          width: 200px;
+          height: 200px;
+          background-color: #00ffb7a3;
+          position: absolute;
+          border-radius: 50%;
+          top: -30px;
+          left: 0px;
+        }
+        .card {
+          // background: rgba(255, 255, 255, 0.473);
+          backdrop-filter: blur(100px);
+          border-radius: 20px;
+          padding: 30px 20px;
+          width: 500px;
+          position: relative;
+          p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 150.19%;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}
