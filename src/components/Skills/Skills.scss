@@ -1,0 +1,90 @@
+.Skills {
+  .container {
+    padding: 30px;
+    padding-bottom: 100px;
+    .title {
+      text-align: center;
+      font-family: Rubik;
+      font-size: 45px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #7b3bf9 44.5%,#00dbd0 60.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+    }
+    .content {
+      width: 100%;
+      display: flex;
+      &-text {
+
+      }
+      &-brand {
+        width: 100%;
+        display: block !important;
+        position: relative;
+        .slick-arrow {
+          display: none !important;
+        }
+        .arrow {
+          position: absolute;
+          height: auto;
+          border: none;
+          background-color: transparent;
+          box-shadow: transparent !important;
+          &-next {
+            top: 40px;
+            right: 30px;
+          }
+          &-prev {
+            top: 40px;
+            left: 30px;
+          }
+        }
+        .slick-dots {
+          bottom: -50px;
+          li.slick-active button:before {
+            opacity: 1;
+            background-color: #7b3bf9;
+            border-color: #7b3bf9;
+          }
+        }
+        .slick-dots li button:before {
+          font-family: 'slick';
+          font-size: 0px;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          content: '•';
+          text-align: center;
+          border: 2px solid #7b3bf9;
+          border-radius: 50%;
+          opacity: 1;
+          /* color: black; */
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+    .brand {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 120px;
+      &-image {
+        transition: .5s;
+        width: 150px;
+        object-fit: contain;
+        height: 100px;
+        &:hover {
+          width: 160px;
+          object-fit: contain;
+          height: 110px;
+        }
+      }
+    }
+  }
+}
