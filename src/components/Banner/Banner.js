@@ -6,9 +6,9 @@ import {
   GoogleOutlined,
   InstagramOutlined,
 } from "@ant-design/icons";
-import { Button } from "antd";
 import billing from "../../assets/images/billing.svg";
 import icon from "../../assets/images/icon-ring.svg";
+import hv from "../../assets/hv.pdf";
 
 const Banner = () => {
   return (
@@ -26,7 +26,12 @@ const Banner = () => {
           Development of web sites and applications, as well as cross-platform
           mobile applications.
         </p>
-        <Button className="btn-cv">
+        <a
+          className="btn-cv"
+          href={hv}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="btn-cv--img">
             <img src={icon} className="icon-ring" alt="icon-ring" />
             <div className="circle">
@@ -37,7 +42,7 @@ const Banner = () => {
             <p>RESUME (CV)</p>
             <span>Download</span>
           </div>
-        </Button>
+        </a>
         <div className="netWorks">
           <a
             href="https://github.com/blasecato"

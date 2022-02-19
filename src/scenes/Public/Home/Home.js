@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import About from "../../../components/About/About.js";
 import Projects from "../../../components/Projects/Projects.js";
 import Skills from "../../../components/Skills/Skills.js";
+import ContactMe from "../../../components/ContactMe/ContactMe.js";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <About />
         <Projects />
         <Skills />
+        <ContactMe />
       </div>
     </div>
   );

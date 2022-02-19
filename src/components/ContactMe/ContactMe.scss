@@ -1,0 +1,44 @@
+.ContactMe {
+  .container {
+    padding: 50px 20px;
+    .title {
+      text-align: center;
+      font-family: Rubik;
+      font-size: 45px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #7b3bf9 44.5%, #00dbd0 60.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 50px;
+    }
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__box {
+    width: 40%;
+  }
+  &__form {
+    width: 60%;
+  }
+  .description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    color: #ffffff;
+    max-width: 400px;
+    text-align: left;
+  }
+  .cont-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

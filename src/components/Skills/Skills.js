@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Button } from "antd";
 import Slider from "react-slick";
 import css from "../../assets/images/brand/css.png";
@@ -14,13 +14,11 @@ import next from "../../assets/images/brand/arrow-next.svg";
 
 const Skills = () => {
   const slider = useRef();
-  const [activeSlide, setActiveSlide] = useState(0);
   const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    beforeChange: (current, next) => setActiveSlide(next),
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 5000,
@@ -71,7 +69,7 @@ const Skills = () => {
           <div className="content-brand">
             <Slider ref={slider} {...settings}>
               {dummyCardsSkills?.map((item, index) => (
-                <div className={`brand`}>
+                <div className={`brand`} key={index}>
                   <img src={item.image} className="brand-image" alt="brand" />
                 </div>
               ))}

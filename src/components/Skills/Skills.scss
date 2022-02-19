@@ -44,8 +44,8 @@
           bottom: -50px;
           li.slick-active button:before {
             opacity: 1;
-            background-color: #7b3bf9;
-            border-color: #7b3bf9;
+            background-color: #fff;
+            border-color: #fff;
           }
         }
         .slick-dots li button:before {
@@ -59,7 +59,7 @@
           height: 12px;
           content: '•';
           text-align: center;
-          border: 2px solid #7b3bf9;
+          border: 2px solid #fff;
           border-radius: 50%;
           opacity: 1;
           /* color: black; */

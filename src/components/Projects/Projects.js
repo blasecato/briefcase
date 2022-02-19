@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import Slider from "react-slick";
+import { LaptopOutlined, TabletOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 import celagem from "../../assets/images/projects/celagem.svg";
 import red from "../../assets/images/projects/red.png";
 import luker from "../../assets/images/projects/luker.png";
@@ -12,12 +15,15 @@ import cubbo from "../../assets/images/projects/cubbo.svg";
 import babu from "../../assets/images/projects/babu.svg";
 import atg from "../../assets/images/projects/title-menu.png";
 import bmw from "../../assets/images/projects/bmw.png";
-import { LaptopOutlined, TabletOutlined } from '@ant-design/icons';
+import prev from "../../assets/images/brand/arrow-prev.svg";
+import next from "../../assets/images/brand/arrow-next.svg";
 
 const Projects = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const slider = useRef();
   const dummyCardsWorks = [
     {
-      id: 1,
+      id: 0,
       name: "Celagem",
       desciption:
         "Centro Latinoamericano en Diagnóstico Genético y molecular, CELAGEM, Especialistas en Salud reproductiva, reproducción asistida y genética.",
@@ -25,10 +31,10 @@ const Projects = () => {
       image: celagem,
       rol: "maquetador developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 2,
+      id: 1,
       name: "Territorios Caqueteños Sostenibles para la Paz)",
       desciption:
         "Somos una institución sin ánimo de lucro de carácter privado comprometidos con los territorios en la generación de desarrollo desde las acciones locales y la construcción de país bajo principios de corresponsabilidad, transparencia, compromiso y solidaridad.",
@@ -36,10 +42,10 @@ const Projects = () => {
       image: red,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 3,
+      id: 2,
       name: "Luker Chocolate",
       desciption:
         "Luker Chocolate es un fabricante de chocolate familiar colombiano de chocolates finos y cacao elaborado en origen. En nuestro esfuerzo por impulsar el bienestar en toda la cadena de valor del cacao.",
@@ -47,10 +53,10 @@ const Projects = () => {
       image: luker,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 4,
+      id: 3,
       name: "No Olvidar GP APP (Gomez Pinzon)",
       desciption:
         "Aplicación móvil realizada en react native para el control de información y agendamiento de citas, consultorías y eventos de la empresa. ",
@@ -58,10 +64,10 @@ const Projects = () => {
       image: gp,
       rol: "Maquetador developer",
       technologies: "",
-      type:"Movil"
+      type: "Movil",
     },
     {
-      id: 5,
+      id: 4,
       name: "Liftit",
       desciption:
         "Somos la plataforma tecnológica líder en automatizar y ejecutar entregas de última milla en América Latina.",
@@ -69,10 +75,10 @@ const Projects = () => {
       image: liftit,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 6,
+      id: 5,
       name: "BerrySafe Client",
       desciption:
         "Berrysafe es la plataforma inteligente que te conecta en minutos con el agente experto en seguros más cercano, para que te ayude a escoger la mejor opción. Ingresa tu código postal para ayudarnos a localizarte e indícanos el tipo de seguro que te interesa. ¡Estamos listos para ayudarte!",
@@ -80,10 +86,10 @@ const Projects = () => {
       image: berrysafe,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 7,
+      id: 6,
       name: "BerrySafe Agent",
       desciption:
         "Berrysafe es la plataforma inteligente que te conecta en minutos con el agente experto en seguros más cercano, para que te ayude a escoger la mejor opción. Ingresa tu código postal para ayudarnos a localizarte e indícanos el tipo de seguro que te interesa. ¡Estamos listos para ayudarte!",
@@ -91,21 +97,20 @@ const Projects = () => {
       image: berrysafe,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 8,
+      id: 7,
       name: "BerrySafe App",
       desciption:
         "Berrysafe es la plataforma inteligente que te conecta en minutos con el agente experto en seguros más cercano, para que te ayude a escoger la mejor opción. Ingresa tu código postal para ayudarnos a localizarte e indícanos el tipo de seguro que te interesa. ¡Estamos listos para ayudarte!",
-      link: "",
       image: splash,
       rol: "Front-end developer",
       technologies: "",
-      type:"Movil"
+      type: "Movil",
     },
     {
-      id: 9,
+      id: 8,
       name: "AMASFAC",
       desciption:
         "La Asociación Mexicana de Agentes de Seguros y Fianzas, AC, se constituyó el 6 de septiembre de 1958, con el objetivo de contribuir al profesionalismo del Agente de Seguros y Fianzas.",
@@ -113,10 +118,10 @@ const Projects = () => {
       image: amasfac,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
-      id: 10,
+      id: 9,
       name: "Carmenta Labs",
       desciption:
         "We partner with companies, from startups to large corporations, to transform ideas into successful businesses. We leverage our expertise in VC investing, investment banking, tech development, and our extensive network to boost entrepreneurial and intrapreneurial ventures in LATAM",
@@ -124,7 +129,7 @@ const Projects = () => {
       image: carmenta,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
       id: 10,
@@ -135,7 +140,7 @@ const Projects = () => {
       image: atg,
       rol: "Front-end developer",
       technologies: "",
-      type:"Movil"
+      type: "Movil",
     },
     {
       id: 11,
@@ -146,7 +151,7 @@ const Projects = () => {
       image: cubbo,
       rol: "Maquetador developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
       id: 12,
@@ -157,53 +162,98 @@ const Projects = () => {
       image: babu,
       rol: "Maquetador developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
     {
       id: 13,
       name: "Technical Test BMW store.",
-      desciption:
-        "Presentada por: Blas Sebastian Calderon Torres",
+      desciption: "Presentada por: Blas Sebastian Calderon Torres",
       link: "https://bmw-store.web.app/",
       image: bmw,
       rol: "Front-end developer",
       technologies: "",
-      type:"Web"
+      type: "Web",
     },
-    
   ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: (current, next) => setActiveSlide(next),
+  };
+  const goToNext = () => {
+    slider.current.slickNext();
+  };
+  const goToPrev = () => {
+    slider.current.slickPrev();
+  };
   return (
     <div className="Projects">
       <div className="container">
         <h1 className="title">Projects</h1>
         <div className="Projects__content">
-          {dummyCardsWorks?.map((item,index)=>
-            <div key={index} className="Projects__content--card">
-              <div className="head">
-                <img src={item.image} className="project-image" alt="project"/>
-              </div>
-              <div className="body">
-                <div className="">
-                  <div className="cont-title">
-                    <h2>{item.name}</h2>
-                  </div>
-                  <div className="divider"/>
-                  <p>{item.desciption}</p>
-                  <div className="rol">
-                    <p>{item.rol}</p>
-                    {item.type === "Web" ? <LaptopOutlined /> : <TabletOutlined />}
+          <div className="box">
+            <Slider ref={slider} {...settings}>
+              {dummyCardsWorks?.map((item, index) => (
+                <div key={index} className="Projects__content--card">
+                  <div className="head">
+                    <img
+                      src={item.image}
+                      className="project-image"
+                      alt="project"
+                    />
                   </div>
                 </div>
-                <div>
-                  <a className="link" target="_blank" rel="noopener noreferrer" href={`${item.link}`}>
-                    <div className="demo">
-                      Demo
-                    </div>
-                  </a>
+              ))}
+            </Slider>
+            <Button onClick={() => goToNext()} className="arrow arrow-next">
+              <img src={next} className="img-logo" alt="next" />
+            </Button>
+            <Button onClick={() => goToPrev()} className="arrow arrow-prev">
+              <img src={prev} className="img-logo" alt="prev" />
+            </Button>
+          </div>
+          <div className="box-information">
+            <div className="body">
+              {dummyCardsWorks?.map((item, index) => (
+                <div key={index}>
+                  {activeSlide === item.id && (
+                    <>
+                      <div className="animate__animated animate__fadeIn">
+                        <div className="cont-title">
+                          <h2>{item.name}</h2>
+                        </div>
+                        <div className="divider" />
+                        <p>{item.desciption}</p>
+                        <div className="rol">
+                          <span>{item.rol}</span>
+                          {item.type === "Web" ? (
+                            <LaptopOutlined />
+                          ) : (
+                            <TabletOutlined />
+                          )}
+                        </div>
+                      </div>
+                      {item.link && 
+                        <div className="animate__animated animate__fadeIn">
+                          <a
+                            className="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`${item.link}`}
+                          >
+                            <div className="demo">Demo</div>
+                          </a>
+                        </div>
+                      }
+                    </>
+                  )}
                 </div>
-              </div>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
