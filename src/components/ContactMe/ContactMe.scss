@@ -9,8 +9,11 @@
       background: linear-gradient(90deg, #7b3bf9 44.5%, #00dbd0 60.97%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
+  }
+  .description {
+    text-align: center !important;
   }
   &__content {
     width: 100%;
@@ -19,10 +22,63 @@
     align-items: center;
   }
   &__box {
-    width: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    svg {
+      width: 500px !important;
+      border-radius: 20px;
+    }
   }
   &__form {
-    width: 60%;
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    .ant-form-item {
+      width: 100%;
+    }
+    .ant-input {
+      border-radius: 2px;
+      transition: all 0.3s;
+      height: 40px;
+      border-radius: 0;
+      border: 0px;
+      border-bottom: 1px solid #d9d9d9;
+    }
+    textarea {
+      height: 80px !important;
+    }
+    .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:focus, .ant-form-item-has-error :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:focus, .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input-focused, .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-focused, .ant-form-item-has-error :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper-focused {
+      box-shadow: none;
+    }
+    .ant-input:focus, .ant-input-focused {
+      box-shadow: none;
+    }
+    .item-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 0 !important;
+      button {
+        height: 50px;
+        border-radius: 5px;
+        margin: 0 auto;
+        background: linear-gradient(284deg, #4a27b4 8.27%, #7F14FC 63.55%);
+        border: none;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
   }
   .description {
     font-family: Roboto;
@@ -40,5 +96,8 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+  }
+  #mailTo {
+    opacity: 0;
   }
 }
