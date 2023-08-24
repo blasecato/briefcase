@@ -1,6 +1,8 @@
 .About-me {
+  display: flex;
+  justify-content: center;
   .container {
-    padding: 30px;
+    padding: 0 30px;
     .title {
       text-align: center;
       font-family: Rubik;
@@ -9,12 +11,13 @@
       background: linear-gradient(90deg, #00dbd0 24.5%, #7b3bf9 60.97%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
     }
     &__box {
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100%;
       &__img {
         width: 50%;
         display: flex;
@@ -27,25 +30,27 @@
       }
       &__content {
         width: 50%;
+        height: 500px;
         position: relative;
         display: flex;
         justify-content: center;
+        align-items: center;
         .circle {
           width: 200px;
           height: 200px;
-          background-color: #04007cc2;
+          background-color: #04007c7b;
           position: absolute;
           border-radius: 50%;
-          bottom: -40px;
+          bottom: 40px;
           right: 0px;
         }
         .circle-two {
           width: 200px;
           height: 200px;
-          background-color: #00ffb7a3;
+          background-color: #00ffb729;
           position: absolute;
           border-radius: 50%;
-          top: -30px;
+          top: 30px;
           left: 0px;
         }
         .card {
@@ -67,5 +72,4 @@
       }
     }
   }
-
 }

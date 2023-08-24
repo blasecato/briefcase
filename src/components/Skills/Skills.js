@@ -1,85 +1,83 @@
-import React, { useRef } from "react";
-import { Button } from "antd";
-import Slider from "react-slick";
-import css from "../../assets/images/brand/css.png";
-import html from "../../assets/images/brand/html.png";
-import js from "../../assets/images/brand/js.png";
-import postgresql from "../../assets/images/brand/postgresql.png";
-import reactNative from "../../assets/images/brand/reactNative.png";
-import sass from "../../assets/images/brand/sass.png";
-import wordpres from "../../assets/images/brand/wordpres.png";
-import redux from "../../assets/images/brand/redux.png";
-import prev from "../../assets/images/brand/arrow-prev.svg";
-import next from "../../assets/images/brand/arrow-next.svg";
+import React from "react";
+import css from "assets/images/brand/css.png";
+import html from "assets/images/brand/html.png";
+import js from "assets/images/brand/js.png";
+import postgresql from "assets/images/brand/postgresql.png";
+import three from "assets/images/brand/three.png";
+import gatsby from "assets/images/brand/gatsby.png";
+// import angular from "assets/images/brand/AngularJS.svg";
+import next from "assets/images/brand/next.webp";
+import reactNative from "assets/images/brand/reactNative.png";
+import sass from "assets/images/brand/sass.png";
+import wordpres from "assets/images/brand/wordpres.png";
+import redux from "assets/images/brand/redux.png";
+import reactNativ from "assets/images/brand/RN.png";
+import Scene3dAvion from "components/Scene3dAvion/Scene3dAvion";
+import Scene3dSphere from "components/Scene3dSphere/Scene3dSphere";
+
+// ts, RRouter,git,node,
 
 const Skills = () => {
-  const slider = useRef();
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 784,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 584,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-    ]
-  };
   const dummyCardsSkills = [
     { id: 1, name: "css", image: css },
     { id: 2, name: "html", image: html },
     { id: 3, name: "js", image: js },
-    { id: 4, name: "postgresql", image: postgresql },
-    { id: 5, name: "reactNative", image: reactNative },
+    { id: 4, name: "Next", image: next },
+    { id: 5, name: "reactNative", image: reactNativ },
     { id: 6, name: "sass", image: sass },
     { id: 7, name: "wordpres", image: wordpres },
     { id: 8, name: "redux", image: redux },
   ];
-  const goToNext = () => {
-    slider.current.slickNext();
-  };
-  const goToPrev = () => {
-    slider.current.slickPrev();
-  };
+  const dummyCardsSkills2 = [
+    { id: 1, name: "post", image: postgresql },
+    { id: 2, name: "three", image: three },
+    { id: 3, name: "GATSBY", image: gatsby },
+  ];
   return (
     <div className="Skills">
       <div className="container">
-        <h1 className="title">Skills</h1>
+        <h1 className="title-effect" data-text="MY TECH STACK.">
+          MY TECH STACK.
+        </h1>
         <div className="content">
-          <div className="content-brand">
-            <Slider ref={slider} {...settings}>
-              {dummyCardsSkills?.map((item, index) => (
-                <div className={`brand`} key={index}>
-                  <img src={item.image} className="brand-image" alt="brand" />
-                </div>
+          <div className="brands">
+            <div className="slidercircle">
+              <div className="circle-one">
+                <div className="circle-arround-one"></div>
+              </div>
+              <div className="circle-two">
+                {dummyCardsSkills?.map((skill) => (
+                  <div key={skill.id}>
+                    <div className={`circle-arround-two-${skill.id} anima`}>
+                      <img src={skill.image} alt="icon" className="icon" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="circle-middle">
+                <img src={reactNative} className="react" alt="center" />
+              </div>
+            </div>
+          </div>
+          <div className="threeD">
+            <div className="scenes3D">
+              <div className="back">
+                <Scene3dSphere />
+              </div>
+              <div className="front">
+                <Scene3dAvion />
+              </div>
+            </div>
+            <div className="brands-list">
+              {dummyCardsSkills2?.map((skill) => (
+                <img
+                  key={skill.id}
+                  src={skill.image}
+                  alt="img"
+                  className="image"
+                />
               ))}
-            </Slider>
-            <Button onClick={() => goToNext()} className="arrow arrow-next">
-              <img src={next} className="img-logo" alt="next" />
-            </Button>
-            <Button onClick={() => goToPrev()} className="arrow arrow-prev">
-              <img src={prev} className="img-logo" alt="prev" />
-            </Button>
+            </div>
           </div>
         </div>
       </div>

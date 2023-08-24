@@ -1,9 +1,11 @@
 import React from "react";
 import { Public } from "./scenes/Public/Public";
 
-function App () {
+function App() {
   return (
-    <Public />
+    <div className="conttainer-app">
+      <Public />
+    </div>
   );
 }
 

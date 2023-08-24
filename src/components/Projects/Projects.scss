@@ -1,15 +1,17 @@
 .Projects {
+  display: flex;
+  justify-content: center;
   .container {
-    padding: 30px;
+    padding: 0 30px;
     .title {
       text-align: center;
       font-family: Rubik;
       font-size: 45px;
       font-weight: bold;
-      background: linear-gradient(90deg, #7b3bf9 44.5%,#00dbd0 60.97%);
+      background: linear-gradient(90deg, #7b3bf9 44.5%, #00dbd0 60.97%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
     }
   }
   &__content {
@@ -18,6 +20,7 @@
     align-items: center;
     flex-wrap: wrap;
     .box-information {
+      height: 520px;
       width: 50%;
       padding: 30px;
     }
@@ -26,7 +29,8 @@
       display: block;
       padding: 30px;
       position: relative;
-      .slick-arrow,.slick-dots {
+      .slick-arrow,
+      .slick-dots {
         display: none !important;
       }
       .arrow {
@@ -35,12 +39,12 @@
         border: none;
         background-color: transparent;
         box-shadow: transparent !important;
-        top: 110px;
+        top: 47%;
         &-next {
-          right: 30px;
+          right: -11px;
         }
         &-prev {
-          left: 30px;
+          left: -11px;
         }
       }
       .slick-dots {
@@ -52,7 +56,7 @@
         }
       }
       .slick-dots li button:before {
-        font-family: 'slick';
+        font-family: "slick";
         font-size: 0px;
         line-height: 20px;
         position: absolute;
@@ -60,7 +64,7 @@
         left: 0;
         width: 12px;
         height: 12px;
-        content: '•';
+        content: "•";
         text-align: center;
         border: 2px solid #fff;
         border-radius: 50%;
@@ -91,9 +95,9 @@
           font-size: 14px;
           line-height: 17px;
           text-align: center;
-          background: linear-gradient(284deg, #4a27b4 8.27%, #7F14FC 63.55%);;
+          background: linear-gradient(284deg, #4a27b4 8.27%, #7f14fc 63.55%);
           border-radius: 5px;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-top: 20px;
         }
       }
@@ -103,10 +107,11 @@
         font-weight: 600;
         font-size: 25px;
         line-height: 27px;
-        color: #FFFFFF;
+        color: #ffffff;
         // text-align: center;
       }
-      p , span{
+      p,
+      span {
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -127,7 +132,7 @@
         height: 1px;
         width: 100%;
         margin: 10px 0;
-        background: linear-gradient(90deg, #db0000 -1.5%,#3b61f9 137.97%);
+        background: linear-gradient(90deg, #db0000 -1.5%, #3b61f9 137.97%);
       }
       .rol {
         display: flex;
@@ -142,23 +147,72 @@
         }
       }
     }
+    .slick-track {
+      padding: 30px 0 !important;
+      .slick-slide {
+        height: 400px !important;
+        z-index: 1;
+        .Projects__content--card {
+          height: 350px;
+          margin-top: 30px;
+          opacity: 0;
+        }
+      }
+      .slick-active {
+        position: relative;
+        z-index: 2;
+        .Projects__content--card {
+          opacity: 0.7;
+          height: 350px;
+          margin-top: 30px;
+          position: relative;
+          z-index: 4;
+          transition: 1s;
+        }
+      }
+      .slick-slide.slick-cloned {
+      }
+      .slick-slide.slick-active.slick-current {
+        position: relative;
+        z-index: 3;
+        // margin: 0 !important;
+        .Projects__content--card {
+          opacity: 1;
+          transform: none !important;
+          transition: 1s;
+          height: 400px !important;
+          margin-top: 0px;
+          &:hover {
+            transform: scale(1.1) !important;
+            background: linear-gradient(
+              90deg,
+              #202e6870 -6.5%,
+              #db000054 137.97%
+            ) !important;
+          }
+        }
+      }
+    }
     &--card {
       backdrop-filter: blur(100px);
-      background: linear-gradient(90deg, #3b61f926 -6.5%,#db000038 137.97%);
-      width: 300px;
+      background: linear-gradient(90deg, #3b61f926 -6.5%, #db000038 137.97%);
+      width: 240px !important;
       border-radius: 10px;
       background-color: #00000049;
-      transition: .5s;
+      transition: 0.5s;
+      transition: 1s;
+      height: 500px;
+
       .head {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         padding: 10px;
-        height: 200px;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        
+
         .project-image {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
@@ -167,7 +221,6 @@
           object-fit: contain;
         }
       }
-      
     }
   }
 }
