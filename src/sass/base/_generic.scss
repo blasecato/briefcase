@@ -50,6 +50,7 @@
   margin-bottom: 0px;
   &::before {
     content: attr(data-text);
+    // content: attr(data-text);
     position: absolute;
     background: linear-gradient(#00dbd0, #7b3bf9);
     -webkit-background-clip: text;
