@@ -72,4 +72,20 @@
       }
     }
   }
+  @media (max-width: $medium) {
+    // display: none;
+    .container {
+      padding: 20px;
+      &__box {
+        flex-direction: column;
+        &__img,
+        &__content {
+          width: 100%;
+          .content3d {
+            height: 300px !important;
+          }
+        }
+      }
+    }
+  }
 }

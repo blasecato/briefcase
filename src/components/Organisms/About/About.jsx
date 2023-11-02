@@ -1,5 +1,5 @@
 import React from "react";
-import Scene3d from "components/Scene3d/Scene3d";
+import Scene3d from "components/Animations/Scene3d/Scene3d";
 
 const About = () => {
   return (
@@ -10,7 +10,6 @@ const About = () => {
         </h1>
         <div className="container__box">
           <div className="container__box__img" data-aos="fade-up-right">
-            {/* <img src={Answer} alt="Answer" className="Answer" /> */}
             <Scene3d />
           </div>
           <div

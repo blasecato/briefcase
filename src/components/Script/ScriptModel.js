@@ -6,7 +6,7 @@ import * as dat from "dat.gui";
 
 //global variables
 let currentMount = null;
-let object = null;
+// let object = null;
 const gui = new dat.GUI();
 
 // const objetos3D = {
@@ -110,11 +110,11 @@ gltfLoader.load(
 // textures
 const textureLoader = new THREE.TextureLoader();
 const mapMind = textureLoader.load("./textures/anime1.webp");
-const map = textureLoader.load("./brick/Wall_Stone_010_basecolor.jpg");
-const aoMap = textureLoader.load("./brick/Wall_Stone_010_ambientOcclusion.jpg");
-const roughnessMap = textureLoader.load("./brick/Wall_Stone_010_roughness.jpg");
-const normalMap = textureLoader.load("./brick/Wall_Stone_010_normal.jpg");
-const heightMap = textureLoader.load("./brick/Wall_Stone_010_height.png");
+// const map = textureLoader.load("./brick/Wall_Stone_010_basecolor.jpg");
+// const aoMap = textureLoader.load("./brick/Wall_Stone_010_ambientOcclusion.jpg");
+// const roughnessMap = textureLoader.load("./brick/Wall_Stone_010_roughness.jpg");
+// const normalMap = textureLoader.load("./brick/Wall_Stone_010_normal.jpg");
+// const heightMap = textureLoader.load("./brick/Wall_Stone_010_height.png");
 
 //Cube
 const geometry = new THREE.BoxBufferGeometry();
@@ -167,15 +167,15 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
 directionalLight.position.set(5, 5, 5);
 pointLight.position.y = 5;
 
-const enviromentMap = new THREE.CubeTextureLoader();
-const envMap = enviromentMap.load([
-  "./envMap/px.png",
-  "./envMap/nx.png",
-  "./envMap/py.png",
-  "./envMap/ny.png",
-  "./envMap/pz.png",
-  "./envMap/nz.png",
-]);
+// const enviromentMap = new THREE.CubeTextureLoader();
+// const envMap = enviromentMap.load([
+//   "./envMap/px.png",
+//   "./envMap/nx.png",
+//   "./envMap/py.png",
+//   "./envMap/ny.png",
+//   "./envMap/pz.png",
+//   "./envMap/nz.png",
+// ]);
 // scene.environment = envMap;
 // scene.background = envMap;
 scene.add(A0);

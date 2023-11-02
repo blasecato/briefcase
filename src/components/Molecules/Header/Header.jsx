@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/SC-01.svg";
+import logo from "assets/images/SC-01.svg";
 import { Button } from "antd";
 
 const Header = () => {

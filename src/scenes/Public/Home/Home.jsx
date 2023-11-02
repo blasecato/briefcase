@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
+import Banner from "components/Organisms/Banner/Banner";
+import About from "components/Organisms/About/About";
+import Projects from "components/Organisms/Projects/Projects";
+import Skills from "components/Organisms/Skills/Skills";
+import ContactMe from "components/Organisms/ContactMe/ContactMe";
+import whatsappPng from "assets/images/whatsaap.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Banner from "components/Banner/Banner";
-import About from "components/About/About.js";
-import Projects from "components/Projects/Projects.js";
-import Skills from "components/Skills/Skills.js";
-import ContactMe from "components/ContactMe/ContactMe.js";
-import whatsaap from "assets/images/whatsaap.png";
 
 const Home = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
       <a
         href="https://wa.me/573157308621?text=Me%20interesaria%20trabajar%20con%20tigo"
         className="buttonW">
-        <img src={whatsaap} alt="whatsaap" className="imgwhatsaap" />
+        <img src={whatsappPng} alt="whatsaap" className="imgwhatsaap" />
       </a>
     </div>
   );

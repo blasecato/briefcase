@@ -16,7 +16,7 @@
   top: 0;
 }
 .contentClient {
-  // background-image: url("../../assets/images/Cover.svg");
+  // background-image: url("../../../assets/images/Cover.svg");
   position: relative;
   z-index: 2;
   background-repeat: no-repeat;
@@ -59,6 +59,9 @@
     // line-height: 0.9;
     clip-path: ellipse(80px 80px at -2.54% -9.25%);
     animation: move 5s alternate infinite;
+  }
+  @media (max-width: 768px) {
+    font-size: 40px;
   }
 }
 @keyframes move {

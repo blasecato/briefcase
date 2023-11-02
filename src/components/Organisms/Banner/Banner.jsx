@@ -2,14 +2,8 @@ import React, { useEffect } from "react";
 import billing from "assets/images/billing.svg";
 import icon from "assets/images/icon-ring.svg";
 import hv from "assets/cv.pdf";
-import Header from "components/Header/Header";
-import {
-  AiFillGithub,
-  AiFillGitlab,
-  AiFillLinkedin,
-  AiFillGooglePlusCircle,
-  AiOutlineInstagram,
-} from "react-icons/ai";
+import Header from "components/Molecules/Header/Header";
+import networks from "common/utils/netWorks";
 
 const Banner = () => {
   useEffect(() => {
@@ -17,7 +11,6 @@ const Banner = () => {
       const textElement = document.getElementById("text");
       const text = textElement.innerHTML;
       textElement.innerHTML = "";
-
       let i = 0;
       function typeWriter() {
         if (i < text.length) {
@@ -26,7 +19,6 @@ const Banner = () => {
           setTimeout(typeWriter, Math.random() * 200 + 100); // Adjust the timing as desired
         }
       }
-
       typeWriter();
     });
   }, []);
@@ -64,41 +56,16 @@ const Banner = () => {
             </div>
           </a>
           <div className="netWorks">
-            <a
-              href="https://github.com/blasecato"
-              target="_blank"
-              className="link-net"
-              rel="noopener noreferrer">
-              <AiFillGithub />
-            </a>
-            <a
-              href="https://gitlab.com/blasecato"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-net link-net--next">
-              <AiFillGitlab />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sebastian-calderon-444366192/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-net">
-              <AiFillLinkedin />
-            </a>
-            <a
-              href="mailto:bl.calderonn@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-net link-net--next">
-              <AiFillGooglePlusCircle />
-            </a>
-            <a
-              href="https://www.instagram.com/blasecato"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-net">
-              <AiOutlineInstagram />
-            </a>
+            {networks?.map((network) => (
+              <a
+                key={network.id}
+                href={`${network.link}`}
+                target="_blank"
+                className="link-net"
+                rel="noopener noreferrer">
+                {network.icon}
+              </a>
+            ))}
           </div>
         </div>
         <div className="animate__fadeInRight animate__animated box box--rigth">
