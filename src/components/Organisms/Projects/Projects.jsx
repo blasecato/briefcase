@@ -29,7 +29,7 @@ const Projects = () => {
     slider.current.slickPrev();
   };
   return (
-    <div className="Projects" data-aos="fade-up">
+    <div className="Projects" data-aos="fade-up" id="projects">
       <div className="container">
         <h1 className="title-effect" data-text="WORK EXPERIENCE.">
           WORK EXPERIENCE.
@@ -57,7 +57,8 @@ const Projects = () => {
                             className="link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={`${item.link}`}>
+                            href={`${item.link}`}
+                          >
                             <div className="demo">Demo</div>
                           </a>
                         </div>

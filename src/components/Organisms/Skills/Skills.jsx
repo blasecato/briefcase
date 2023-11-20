@@ -6,7 +6,7 @@ import Scene3dSphere from "components/Animations/Scene3dSphere/Scene3dSphere";
 
 const Skills = () => {
   return (
-    <div className="Skills">
+    <div className="Skills" id="skills">
       <div className="container">
         <h1 className="title-effect" data-text="MY TECH STACK.">
           MY TECH STACK.

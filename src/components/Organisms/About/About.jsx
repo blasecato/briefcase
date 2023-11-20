@@ -3,7 +3,7 @@ import Scene3d from "components/Animations/Scene3d/Scene3d";
 
 const About = () => {
   return (
-    <div className="About-me" data-aos="fade-up">
+    <div className="About-me" data-aos="fade-up" id="about-me">
       <div className="container">
         <h1 className="title-effect" data-text="ABOUT ME">
           ABOUT ME
@@ -17,25 +17,18 @@ const About = () => {
             data-aos="fade-up-left"
             data-aos-offset="200"
             data-aos-easing="ease-out-cube"
-            data-aos-duration="500">
+            data-aos-duration="500"
+          >
             <div className="circle"></div>
             <div className="circle-two"></div>
             <div className="card">
               <p>
-                Professional systems engineer in training and frontend
-                developer. <br />
-                Four (4) words define me. Learn, Technology, Responsible,
-                Friendly. <br />
-                <br />I like to be in constant learning and to be updated in the
-                technologies that I use.
-                <br />
-                <br /> Technology has always caught my attention, since I was
-                very young it has been a great passion, <br />
-                <br /> I like to be committed y responsible with the tasks that
-                are entrusted to me and achieve the goals effectively and
-                efficiently, I consider myself a person who adapts to teamwork
-                and who likes to give his contribution, opinion and add to a
-                work team
+                Hi, I'm Blas, a frontend developer. I define myself as
+                Responsible, Companionate, Adaptable, Studious. <br />
+                <br /> I like to be committed and responsible with the tasks
+                entrusted to me and achieve objectives effectively. I consider
+                myself a person who adapts to teamwork and who likes to give his
+                contribution, opinion and add to a work team.
                 <br />
                 <br />
               </p>

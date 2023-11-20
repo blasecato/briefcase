@@ -30,7 +30,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="ContactMe">
+    <div className="ContactMe" id="contact">
       <div className="container">
         <h1 className="title-effect" data-text="CONTACT ME">
           CONTACT ME
@@ -44,12 +44,14 @@ const ContactMe = () => {
               className="map"
               height={450}
               defaultCenter={[4.669494, -74.093402]}
-              defaultZoom={5.5}>
+              defaultZoom={5.5}
+            >
               <Marker
                 width={50}
                 anchor={[1.622569, -75.600685]}
                 color={color}
-                onClick={() => setHue(hue + 20)}>
+                onClick={() => setHue(hue + 20)}
+              >
                 <img src={iam} className="location" alt="iam" />
               </Marker>
             </Map>

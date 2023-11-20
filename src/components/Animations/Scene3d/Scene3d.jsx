@@ -15,7 +15,8 @@ const Scene3d = () => {
     <div
       className="content3d"
       ref={mountRef}
-      style={{ width: "100%", height: "500px" }}></div>
+      style={{ width: "100%", height: "350px" }}
+    ></div>
   );
 };
 

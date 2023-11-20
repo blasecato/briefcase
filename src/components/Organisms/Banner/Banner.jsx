@@ -23,7 +23,7 @@ const Banner = () => {
     });
   }, []);
   return (
-    <div className="Banner">
+    <div className="Banner" id="banner">
       <Header />
       <div className="container">
         <div className="animate__fadeInLeft animate__animated box box--left">
@@ -43,7 +43,8 @@ const Banner = () => {
             className="btn-cv"
             href={hv}
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <div className="btn-cv--img">
               <img src={icon} className="icon-ring" alt="icon-ring" />
               <div className="circle">
@@ -62,7 +63,8 @@ const Banner = () => {
                 href={`${network.link}`}
                 target="_blank"
                 className="link-net"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 {network.icon}
               </a>
             ))}

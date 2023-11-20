@@ -1,8 +1,10 @@
 .About-me {
   display: flex;
   justify-content: center;
+
   .container {
     padding: 0 30px;
+
     .title {
       text-align: center;
       font-family: Rubik;
@@ -13,28 +15,32 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: 0px;
     }
+
     &__box {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
+
       &__img {
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .Answer {
           max-width: 514px;
           max-height: 514px;
         }
       }
+
       &__content {
         width: 50%;
-        height: 500px;
+        height: auto;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .circle {
           width: 200px;
           height: 200px;
@@ -44,6 +50,7 @@
           bottom: 40px;
           right: 0px;
         }
+
         .circle-two {
           width: 200px;
           height: 200px;
@@ -53,13 +60,19 @@
           top: 30px;
           left: 0px;
         }
+
         .card {
           // background: rgba(255, 255, 255, 0.473);
           backdrop-filter: blur(100px);
           border-radius: 20px;
           padding: 30px 20px;
           width: 500px;
+          height: 300px;
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
           p {
             font-family: Roboto;
             font-style: normal;
@@ -72,15 +85,20 @@
       }
     }
   }
+
   @media (max-width: $medium) {
+
     // display: none;
     .container {
       padding: 20px;
+
       &__box {
         flex-direction: column;
+
         &__img,
         &__content {
           width: 100%;
+
           .content3d {
             height: 300px !important;
           }

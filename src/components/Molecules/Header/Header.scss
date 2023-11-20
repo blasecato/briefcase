@@ -3,22 +3,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
+
     .box {
       display: flex;
       align-items: center;
       padding: 0;
+
       &:last-child {
         justify-content: flex-end;
       }
+
       .btn-logo {
         height: auto;
         border: none;
         background: transparent;
+
         .logo {
           width: 41px;
           filter: invert(1);
@@ -26,24 +31,28 @@
           object-fit: contain;
         }
       }
+
       .button-header {
         margin: 0 10px;
         border-radius: 10px;
         transition: 0.9s;
         border: none;
+
         &--content {
           border-radius: 10px;
           transition: 0.9s;
           height: 45px;
-          color: #7e53f3;
+          color: #e9eaff;
           padding: 10px;
           padding-right: 15px;
           display: flex;
           justify-content: space-between;
           align-items: center;
+
           .anticon {
-            color: #7e53f3;
+            color: #e9eaff;
           }
+
           span {
             margin-left: 5px;
             font-family: Rubik;
@@ -51,9 +60,10 @@
             font-size: 15px;
           }
         }
+
         &:hover {
           border: none;
-          box-shadow: 7px 5px 16px #202020;
+          box-shadow: 7px 5px 16px rgb(30, 3, 46);
         }
       }
     }

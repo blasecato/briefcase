@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1300px;
   width: 100%;
 }
+
 .conttainer-float-back {
-  background-image: url("../../assets/images/star4.jpg");
+  // background-image: url("../../assets/images/star4.jpg");
   // background-image: url("../../assets/images/HERO.png");
   background-size: cover;
   background-position: center;
@@ -15,13 +20,14 @@
   left: 0;
   top: 0;
 }
+
 .contentClient {
   // background-image: url("../../../assets/images/Cover.svg");
   position: relative;
   z-index: 2;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background: #0000009e;
+  background: #0f0527;
   // background: linear-gradient(
   //   90deg,
   //   rgba(27, 0, 36, 1) 0%,
@@ -29,14 +35,17 @@
   //   rgba(134, 25, 153, 1) 100%
   // );
 }
-.Banner {
-}
+
+.Banner {}
+
 .dg.main .close-button.close-bottom {
   // display: none;
 }
+
 .content3d {
   cursor: all-scroll;
 }
+
 .close-button {
   display: none;
 }
@@ -48,6 +57,7 @@
   font-weight: bold;
   color: #7b3bf9;
   margin-bottom: 0px;
+
   &::before {
     content: attr(data-text);
     // content: attr(data-text);
@@ -60,17 +70,21 @@
     clip-path: ellipse(80px 80px at -2.54% -9.25%);
     animation: move 5s alternate infinite;
   }
+
   @media (max-width: 768px) {
     font-size: 40px;
   }
 }
+
 @keyframes move {
   0% {
     clip-path: ellipse(80px 80px at -2.54% -9.25%);
   }
+
   50% {
     clip-path: ellipse(100px 80px at 49.66% 64.36%);
   }
+
   100% {
     clip-path: ellipse(80px 80px at 102.62% -1.61%);
   }
